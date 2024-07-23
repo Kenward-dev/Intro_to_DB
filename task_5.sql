@@ -9,7 +9,7 @@ db = mysql.connector.connect(
 
 mycursor = db.cursor()
 
-sql = "INSERT INTO Customer(customer_id, custormer_name, email, address) VALUES (%s, %s, %s, %s)"
+sql = "INSERT INTO customer(customer_id, custormer_name, email, address) VALUES (%s, %s, %s, %s)"
 val = (1, "Cole Baidoo", "cbaidoo@sandtech.com", "123 Happiness Ave.")
 
 mycursor.execute(sql, val)
