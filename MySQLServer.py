@@ -18,7 +18,7 @@ def create_database():
             mycursor.close()
             db.close()
 
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error: {e}")
 
 if __name__ == "__main__":
