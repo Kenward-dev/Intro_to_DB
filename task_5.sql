@@ -1,19 +1,5 @@
-import mysql.connector
+USE alx_book_store;
 
-db = mysql.connector.connect(
-	host="localhost",
-    user="root",
-    password="dogtorken",
-    database="alx_book_store"
-)
+INSERT INTO Customers (customer_id, customer_name, email, address)
+VALUES (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.');
 
-mycursor = db.cursor()
-
-sql = "INSERT INTO customer(customer_id,custormer_name, email, address) VALUES (%s, %s, %s, %s)"
-val = (1, "Cole Baidoo", "cbaidoo@sandtech.com", "123 Happiness Ave.")
-
-mycursor.execute(sql, val)
-db.commit()
-
-mycursor.close()
-mydb.close()
